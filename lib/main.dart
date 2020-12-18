@@ -60,37 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String Operator = "";
   String Result = "";
 
-  void launchWhatsApp({
-    @required String phone,
-    @required String message,
-  }) async {
-    String url() {
-      // return "whatsapp://send?   phone=$phone&text=${Uri.parse(message)}";
-      if (Platform.isIOS) {
-        return "whatsapp://wa.me/$phone/?text=${Uri.parse(message)}";
-      } else {
-        return "whatsapp://send?   phone=$phone&text=${Uri.parse(message)}";
-      }
-    }
-
-    // launchURL() async {
-    //   const url = 'https://flutter.dev';
-    //   if (await canLaunch(url)) {
-    //     await launch(url);
-    //   } else {
-    //     throw 'Could not launch $url';
-    //   }
-    // }
-  }
-
-  void cusotmLaunch(command) async {
-    if (await canLaunch(command)) {
-      await launch(command);
-    } else {
-      print("Could not print command HAHAHA");
-    }
-  }
-
+ 
   Calc() {
     if (Operator == "+") {
       try {
